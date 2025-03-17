@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind dark mode configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#1a1a1a',
+                            surface: '#2d2d2d',
+                            text: '#ffffff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-dark-bg transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-dark-surface shadow-lg fixed w-full z-10 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center py-4">
+                    <span class="font-semibold text-gray-700 dark:text-white text-lg">Google Leinz</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Navigation Links -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 dark:text-white">Home</a>
+                        <a href="#features" class="nav- link text-gray-700 dark:text-white">Features</a>
+                        <a href="#contact" class="nav-link text-gray-700 dark:text-white">Contact</a>
+                        <a href="#about" class="nav-link text-gray-700 dark:text-white">About</a>
+                    <!-- Dark Mode Toggle -->
+                    </div>
+                    <!-- Mobile menu button -->
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
+                        <svg id="sunIcon" class="w-6 h-6 hidden dark:block text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <svg id="moonIcon" class="w-6 h-6 block dark:hidden text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    <button class="md:hidden outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu md:hidden">
+            <ul class="px-2 pt-2 pb-3 space-y-1">
+                <li><a href="#home" class="mobile-nav-link text-gray-700 dark:text-white">Home</a></li>
+                <li><a href="#features" class="mobile-nav-link text-gray-700 dark:text-white">Features</a></li>
+                <li><a href="#contact" class="mobile-nav-link text-gray-700 dark:text-white">Contact</a></li>
+                <li><a href="#about" class="mobile-nav-link text-gray-700 dark:text-white">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="pt-32 pb-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Welcome to Google "Leinz"</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">Empowering businesses with cutting-edge AI assistance tools</p>
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 bg-gray-50 dark:bg-dark-bg transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Our Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Cloud Storage</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Secure and scalable storage solutions for your business needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Machine Learning</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Advanced AI and ML capabilities to transform your ideas into reality.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-4">Analytics</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Powerful analytics tools to make data-driven decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white dark:bg-dark-surface transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-gray-800 dark:text-white mb-12 sm:text-4xl">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form id="contactForm" class="space-y-6">
+                    <!-- Name Field -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Name
+                        </label>
+                        <input type="text" id="name" name="name" 
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 transition duration-200"
+                            placeholder="Your full name" aria-label="Full Name" required>
+                    </div>
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" 
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 transition duration-200"
+                            placeholder="Your email address" aria-label="Email Address" required>
+                    </div>
+                    <!-- Message Field -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Message
+                        </label>
+                        <textarea id="message" name="message" rows="5" 
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 transition duration-200"
+                            placeholder="Write your message here..." aria-label="Message" required></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <div>
+                        <button type="submit" 
+                            class="w-full bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-dark-surface transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                    <!-- Feedback Message -->
+                    <div id="formMessage" class="text-sm text-center text-gray-700 dark:text-gray-300"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white dark:bg-dark-surface transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">About Us</h2>
+            <div class="flex flex-col items-center justify-center text-center space-y-4 h-full">
+                <h3 class="text-xl font-semibold text-gray-700 dark:text-white">Our Mission and Vision</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                To present this website to potential employers as a testament to my skills and passion for Web Development with the help of AI. This project assesment reflects my ability deliver high-quality results. Eager to contribute my skills and enthusiasm to a dynamic and innovative company.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Dark mode functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled' || 
+            (localStorage.getItem('darkMode') !== 'disabled' && 
+             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', 
+                document.documentElement.classList.contains('dark') ? 'enabled' : 'disabled'
+            );
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 20; // Adjust for fixed header
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form handling
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+    document.querySelector("#contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent default form submission
+    const data = {
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        message: document.querySelector("#message").value
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        document.querySelector("#formMessage").innerText = result.message || "Form submitted successfully!";
+    } catch (error) { 
+        console.error("Error submitting the form:", error);
+        document.querySelector("#formMessage").innerText = "There was an error submitting the form.";
+    }
+    });
+    </script>
+</body>
+</html>
